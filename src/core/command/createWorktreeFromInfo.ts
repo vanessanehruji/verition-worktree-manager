@@ -8,13 +8,15 @@ import { actionProgressWrapper } from '@/core/ui/progress';
 import { withResolvers } from '@/core/util/promise';
 import type { ICreateWorktreeInfo } from '@/types';
 import { writeSubfolderSettings } from '@/core/command/postCreateSettings';
+import * as fs from 'fs';
+import * as path from 'path';
 
 export async function createWorktreeFromInfo(info: ICreateWorktreeInfo) {
     const { folderPath, name, label, isBranch, cwd } = info;
     let confirmCreate = await confirmModal(
         vscode.l10n.t('Create worktree'),
         vscode.l10n.t('Create'),
-        vscode.l10n.t('A worktree for {label} {name} will be created under {folder}', {folder: folderPath, label, name})
+        vscode.l10n.t('A worktree for {label} {name} will be created under {folder}', { folder: folderPath, label, name })
     );
     if (!confirmCreate) {
         return;
@@ -24,7 +26,7 @@ export async function createWorktreeFromInfo(info: ICreateWorktreeInfo) {
     actionProgressWrapper(
         vscode.l10n.t('Creating worktree {path}', { path: folderPath }),
         () => waitingCreate.promise,
-        () => {}
+        () => { }
     );
     let created = await addWorktree(folderPath, name, isBranch, cwd);
     waitingCreate.resolve();
@@ -54,7 +56,19 @@ export async function createWorktreeFromInfo(info: ICreateWorktreeInfo) {
     if (!confirmOpen) {
         return;
     }
-    let folderUri = vscode.Uri.file(folderPath);
+
+    const cfg = vscode.workspace.getConfiguration('verition-worktree-manager', vscode.Uri.file(folderPath));
+    const subpath = (cfg.get<string>('openSubpath', '') ?? '').trim();
+
+    let targetPath = folderPath;
+    if (subpath) {
+        const candidate = path.join(folderPath, subpath);
+        if (fs.existsSync(candidate)) {
+            targetPath = candidate;
+        }
+    }
+
+    let folderUri = vscode.Uri.file(targetPath);
     vscode.commands.executeCommand('vscode.openFolder', folderUri, {
         forceNewWindow: true,
     });
