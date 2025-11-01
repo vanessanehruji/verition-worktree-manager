@@ -13,9 +13,21 @@ export const openTerminalCmd = async (item?: AllViewItem) => {
     if (!item) return;
     const fsPath = item.fsPath;
     if (!(await verifyDirExistence(fsPath))) return;
+
+    const cfg = vscode.workspace.getConfiguration('verition-worktree-manager', vscode.Uri.file(fsPath));
+    const subpath = (cfg.get<string>('openSubpath', '') ?? '').trim();
+
+    let targetPath = fsPath;
+    if (subpath) {
+        const candidate = path.join(fsPath, subpath);
+        if (await verifyDirExistence(candidate)) {
+            targetPath = candidate;
+        }
+    }
+
     // Prepare variables for template
     const label = item.name;
-    const fullPath = fsPath;
+    const fullPath = targetPath;
     const baseName = path.basename(fullPath);
     let name: string | undefined = getTerminalNameTemplateConfig();
     if (typeof name === 'string' && name.trim()) {
@@ -27,8 +39,8 @@ export const openTerminalCmd = async (item?: AllViewItem) => {
         name = undefined;
     }
     const terminalOptions: vscode.TerminalOptions = {
-        cwd: fsPath,
-        color: judgeIncludeFolder(fsPath) ? new vscode.ThemeColor('terminal.ansiBlue') : void 0,
+        cwd: targetPath,
+        color: judgeIncludeFolder(targetPath) ? new vscode.ThemeColor('terminal.ansiBlue') : void 0,
         iconPath: new vscode.ThemeIcon('terminal-bash'),
         isTransient: false,
         hideFromUser: false,
@@ -43,11 +55,11 @@ export const openTerminalCmd = async (item?: AllViewItem) => {
     if (!cmdList.length) return;
     const watchOpenTerminal = vscode.window.onDidOpenTerminal(async t => {
         let [pid, currentPid] = await Promise.all([t.processId, terminal.processId]);
-        if(pid !== currentPid) return;
+        if (pid !== currentPid) return;
         let cmdText = cmdList[0];
         watchOpenTerminal.dispose();
         // 单个
-        if(cmdList.length <= 1) {
+        if (cmdList.length <= 1) {
             cmdText && terminal.sendText(cmdText, true);
             return;
         }
@@ -58,7 +70,7 @@ export const openTerminalCmd = async (item?: AllViewItem) => {
         // 多选
         let cancelToken = new vscode.CancellationTokenSource();
         let disposable = vscode.window.onDidCloseTerminal(async (t) => {
-            if((await t.processId) !== currentPid) return;
+            if ((await t.processId) !== currentPid) return;
             close();
         });
         const items: CmdItem[] = cmdList.map((text) => ({
