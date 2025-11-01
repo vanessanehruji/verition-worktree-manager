@@ -7,6 +7,7 @@ import { postCreateWorktree } from '@/core/util/postCreateWorktree';
 import { actionProgressWrapper } from '@/core/ui/progress';
 import { withResolvers } from '@/core/util/promise';
 import type { ICreateWorktreeInfo } from '@/types';
+import { writeSubfolderSettings } from '@/core/command/postCreateSettings';
 
 export async function createWorktreeFromInfo(info: ICreateWorktreeInfo) {
     const { folderPath, name, label, isBranch, cwd } = info;
@@ -41,6 +42,9 @@ export async function createWorktreeFromInfo(info: ICreateWorktreeInfo) {
         worktreePath: folderPath,
         basePath: mainFolder,
     });
+
+    // write .vscode/settings.json under <worktree>/<openSubpath>
+    await writeSubfolderSettings(folderPath);
 
     let confirmOpen = await confirmModal(
         vscode.l10n.t('Open folder'),
