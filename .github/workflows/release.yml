@@ -20,7 +20,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 10
+          version: 10.20.0
           run_install: false
 
       - name: Setup Node.js
@@ -30,7 +30,8 @@ jobs:
           registry-url: "https://registry.npmjs.org"
           cache: "pnpm"
 
-      - run: npx changelogithub
+      - name: Generate Changelog
+        run: npx changelogithub
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -47,6 +48,3 @@ jobs:
 
       - name: Publish Extension to VSCode Marketplace
         run: pnpm exec vsce publish -p ${{ secrets.VSCE_TOKEN }} --no-dependencies
-
-      - name: Publish Extension to OVSX
-        run: pnpm exec ovsx publish -p ${{ secrets.OVSX_TOKEN }} --no-dependencies
