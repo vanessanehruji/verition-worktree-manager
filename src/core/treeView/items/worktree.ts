@@ -12,6 +12,7 @@ import { parseUpstream } from '@/core/util/ref';
 import logger from '@/core/log/logger';
 import { Config } from '@/core/config/setting';
 import path from 'path';
+import fs from 'fs';
 
 export class WorktreeItem extends vscode.TreeItem implements IWorktreeLess {
     iconPath: vscode.ThemeIcon = new vscode.ThemeIcon('folder');
@@ -91,10 +92,16 @@ export class WorktreeItem extends vscode.TreeItem implements IWorktreeLess {
     }
 
     private setCommand() {
+        const subpath = (Config.get('openSubpath', '') as string).trim();
+
+        const rootPath = this.viewItem.path;
+        const candidate = subpath ? path.join(rootPath, subpath) : rootPath;
+        const targetPath = subpath && fs.existsSync(candidate) ? candidate : rootPath;
+
         this.command = {
             title: 'open worktree',
             command: 'vscode.openFolder',
-            arguments: [vscode.Uri.file(this.viewItem.path), { forceNewWindow: true }],
+            arguments: [vscode.Uri.file(targetPath), { forceNewWindow: true }],
         };
     }
 

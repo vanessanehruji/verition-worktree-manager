@@ -858,6 +858,11 @@
             "default": "error",
             "description": "%config.alertLevel.description%"
           },
+          "git-worktree-manager.openSubpath": {
+            "type": "string",
+            "default": "",
+            "description": "Optional subfolder to open under each worktree. If empty, open the worktree root."
+          },
           "git-worktree-manager.gitHistoryExtension": {
             "order": 1,
             "scope": "application",

@@ -12,7 +12,7 @@ import { DefaultDisplayList, GitHistoryExtension } from '@/types';
  * Encapsulates VSCode configuration system operations and provides type-safe configuration access
  */
 export class Config {
-    private constructor() {}
+    private constructor() { }
 
     /** Array of disposable objects for storing configuration change listeners */
     static disposables: vscode.Disposable[] = [];
@@ -71,6 +71,9 @@ export class Config {
 
     // Post-creation command configuration
     static get(key: 'postCreateCmd', defaultValue: ''): string;
+
+
+    static get(key: 'openSubpath', defaultValue: string): string;
     /**
      * Get configuration value
      * @param key Configuration key name
