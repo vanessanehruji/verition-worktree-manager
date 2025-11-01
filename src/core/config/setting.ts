@@ -1,6 +1,6 @@
 /**
  * Configuration Management Module
- * Manages all configuration items for the Git Worktree Manager extension
+ * Manages all configuration items for the Verition Worktree Manager extension
  * Provides unified configuration access, update, and monitoring functionality
  */
 import * as vscode from 'vscode';

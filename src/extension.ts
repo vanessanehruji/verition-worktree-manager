@@ -4,7 +4,7 @@ import { Commands } from '@/constants';
 import { bootstrap } from '@/core/bootstrap';
 
 export function activate(context: vscode.ExtensionContext) {
-    logger.log('git-worktree-manager is now active!');
+    logger.log('verition-worktree-manager is now active!');
     bootstrap(context);
 }
 

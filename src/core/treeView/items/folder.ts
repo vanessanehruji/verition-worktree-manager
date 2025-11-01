@@ -18,7 +18,7 @@ export class FolderItem extends vscode.TreeItem implements IWorktreeLess {
     private setProperties(item: IRecentItem) {
         const isFolder = item.type === RecentItemType.folder;
         const uri = vscode.Uri.parse(item.path);
-        this.contextValue = isFolder ? 'git-worktree-manager.folderItem' : 'git-worktree-manager.workspaceItem';
+        this.contextValue = isFolder ? 'verition-worktree-manager.folderItem' : 'verition-worktree-manager.workspaceItem';
         this.uriPath = uri.toString();
         this.fsPath = uri.fsPath;
         this.description = uri.fsPath;
@@ -50,7 +50,7 @@ export class FolderLoadMore extends vscode.TreeItem implements ILoadMoreItem {
     }
 
     private setProperties() {
-        this.contextValue = 'git-worktree-manager.loadMore';
+        this.contextValue = 'verition-worktree-manager.loadMore';
     }
 
     private setCommand() {
@@ -81,7 +81,7 @@ export class WorkspaceMainGitFolderItem extends vscode.TreeItem implements IWork
         this.uriPath = uri.toString();
         this.name = name;
         this.description = filepath;
-        this.contextValue = `git-worktree-manager.workspaceGitMainFolder`;
+        this.contextValue = `verition-worktree-manager.workspaceGitMainFolder`;
     }
 
     private setTooltip(filepath: string) {

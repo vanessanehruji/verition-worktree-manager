@@ -16,7 +16,7 @@ export class FileItem extends vscode.TreeItem implements IWorktreeLess {
 
     private setProperties(item: IRecentItem) {
         const uri = vscode.Uri.parse(item.path);
-        this.contextValue = 'git-worktree-manager.fileItem';
+        this.contextValue = 'verition-worktree-manager.fileItem';
         this.uriPath = uri.toString();
         this.fsPath = uri.fsPath;
         this.description = uri.fsPath;

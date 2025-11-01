@@ -1,9 +1,9 @@
 {
-  "publisher": "jackiotyu",
-  "name": "git-worktree-manager",
-  "displayName": "Git Worktree Manager",
+  "publisher": "vnehruji",
+  "name": "verition-worktree-manager",
+  "displayName": "Verition Worktree Manager",
   "description": "Effortless multi-workspace management and fast Git project cloning across directories.轻松管理多工作区，快速克隆 Git 项目并跨目录运行。",
-  "version": "3.15.0",
+  "version": "3.16.0",
   "engines": {
     "vscode": "^1.60.0"
   },
@@ -29,16 +29,16 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jackiotyu/git-worktree-manager.git"
+    "url": "https://github.com/vnehruji/verition-worktree-manager.git"
   },
   "bugs": {
-    "url": "https://github.com/jackiotyu/git-worktree-manager/issues"
+    "url": "https://github.com/vnehruji/verition-worktree-manager/issues"
   },
   "badges": [
     {
       "url": "https://img.shields.io/badge/PRs-welcome-brightgreen.svg",
       "description": "PRs Welcome",
-      "href": "https://github.com/jackiotyu/git-worktree-manager/fork"
+      "href": "https://github.com/vnehruji/verition-worktree-manager/fork"
     }
   ],
   "icon": "images/icon.png",
@@ -48,767 +48,767 @@
   "contributes": {
     "commands": [
       {
-        "command": "git-worktree-manager.switchWorktree",
+        "command": "verition-worktree-manager.switchWorktree",
         "title": "%cmd.switchWorktree%",
         "category": "Worktree"
       },
       {
-        "command": "git-worktree-manager.switchToSelectWorkspace",
+        "command": "verition-worktree-manager.switchToSelectWorkspace",
         "title": "%cmd.switchToSelectWorkspace%",
         "icon": "$(arrow-right)"
       },
       {
-        "command": "git-worktree-manager.refreshWorktree",
+        "command": "verition-worktree-manager.refreshWorktree",
         "title": "%cmd.freshWorktree%",
         "icon": "$(refresh)"
       },
       {
-        "command": "git-worktree-manager.refreshGitFolder",
+        "command": "verition-worktree-manager.refreshGitFolder",
         "title": "%cmd.refreshGitFolder%",
         "icon": "$(refresh)"
       },
       {
-        "command": "git-worktree-manager.refreshRecentFolder",
+        "command": "verition-worktree-manager.refreshRecentFolder",
         "title": "%cmd.refreshFolder%",
         "icon": "$(refresh)"
       },
       {
-        "command": "git-worktree-manager.refreshFavorite",
+        "command": "verition-worktree-manager.refreshFavorite",
         "title": "%cmd.refreshFavorite%",
         "icon": "$(refresh)"
       },
       {
-        "command": "git-worktree-manager.addWorktree",
+        "command": "verition-worktree-manager.addWorktree",
         "title": "%cmd.addWorktree%",
         "icon": "$(new-folder)",
         "category": "Worktree"
       },
       {
-        "command": "git-worktree-manager.addGitFolder",
+        "command": "verition-worktree-manager.addGitFolder",
         "title": "%cmd.addGitFolder%",
         "icon": "$(add)",
         "category": "Worktree"
       },
       {
-        "command": "git-worktree-manager.removeWorktree",
+        "command": "verition-worktree-manager.removeWorktree",
         "title": "%cmd.removeWorktree%",
         "icon": "$(close)"
       },
       {
-        "command": "git-worktree-manager.addWorktreeFromBranch",
+        "command": "verition-worktree-manager.addWorktreeFromBranch",
         "title": "%cmd.addWorktreeFromBranch%",
         "icon": "$(new-folder)"
       },
       {
-        "command": "git-worktree-manager.revealInSystemExplorer",
+        "command": "verition-worktree-manager.revealInSystemExplorer",
         "title": "%cmd.revealInSystemExplorer%",
         "icon": "$(folder-opened)"
       },
       {
-        "command": "git-worktree-manager.revealInSystemExplorer.context",
+        "command": "verition-worktree-manager.revealInSystemExplorer.context",
         "title": "%cmd.revealInSystemExplorer%",
         "icon": "$(folder-opened)"
       },
       {
-        "command": "git-worktree-manager.repairWorktree",
+        "command": "verition-worktree-manager.repairWorktree",
         "title": "%cmd.repairWorktree%"
       },
       {
-        "command": "git-worktree-manager.moveWorktree",
+        "command": "verition-worktree-manager.moveWorktree",
         "title": "%cmd.moveWorktree%"
       },
       {
-        "command": "git-worktree-manager.lockWorktree",
+        "command": "verition-worktree-manager.lockWorktree",
         "title": "%cmd.lockWorktree%",
         "icon": "$(lock)"
       },
       {
-        "command": "git-worktree-manager.unlockWorktree",
+        "command": "verition-worktree-manager.unlockWorktree",
         "title": "%cmd.unlockWorktree%",
         "icon": "$(unlock)"
       },
       {
-        "command": "git-worktree-manager.pullWorktree",
+        "command": "verition-worktree-manager.pullWorktree",
         "title": "%cmd.pullWorktree%",
         "icon": "$(repo-pull)"
       },
       {
-        "command": "git-worktree-manager.pushWorktree",
+        "command": "verition-worktree-manager.pushWorktree",
         "title": "%cmd.pushWorktree%",
         "icon": "$(repo-push)"
       },
       {
-        "command": "git-worktree-manager.pruneWorktree",
+        "command": "verition-worktree-manager.pruneWorktree",
         "title": "%cmd.pruneWorktree%",
         "icon": "$(wand)"
       },
       {
-        "command": "git-worktree-manager.removeGitFolder",
+        "command": "verition-worktree-manager.removeGitFolder",
         "title": "%cmd.removeGitFolder%",
         "icon": "$(close)"
       },
       {
-        "command": "git-worktree-manager.removeMultiGitFolder",
+        "command": "verition-worktree-manager.removeMultiGitFolder",
         "title": "%cmd.removeMultiGitFolder%",
         "icon": "$(trash)"
       },
       {
-        "command": "git-worktree-manager.removeFavorite",
+        "command": "verition-worktree-manager.removeFavorite",
         "title": "%cmd.removeFavorite%",
         "icon": "$(close)"
       },
       {
-        "command": "git-worktree-manager.removeMultiFavorite",
+        "command": "verition-worktree-manager.removeMultiFavorite",
         "title": "%cmd.removeMultiFavorite%",
         "icon": "$(trash)"
       },
       {
-        "command": "git-worktree-manager.renameGitFolder",
+        "command": "verition-worktree-manager.renameGitFolder",
         "title": "%cmd.renameGitFolder%",
         "icon": "$(edit)"
       },
       {
-        "command": "git-worktree-manager.openTerminal",
+        "command": "verition-worktree-manager.openTerminal",
         "title": "%cmd.openTerminal%",
         "icon": "$(terminal)"
       },
       {
-        "command": "git-worktree-manager.openExternalTerminal",
+        "command": "verition-worktree-manager.openExternalTerminal",
         "title": "%cmd.openExternalTerminal%",
         "icon": "$(terminal-bash)"
       },
       {
-        "command": "git-worktree-manager.openExternalTerminal.context",
+        "command": "verition-worktree-manager.openExternalTerminal.context",
         "title": "%cmd.openExternalTerminal%",
         "icon": "$(terminal-bash)"
       },
       {
-        "command": "git-worktree-manager.addToWorkspace",
+        "command": "verition-worktree-manager.addToWorkspace",
         "title": "%cmd.addToWorkspace%"
       },
       {
-        "command": "git-worktree-manager.removeFromWorkspace",
+        "command": "verition-worktree-manager.removeFromWorkspace",
         "title": "%cmd.removeFromWorkspace%"
       },
       {
-        "command": "git-worktree-manager.copyFilePath",
+        "command": "verition-worktree-manager.copyFilePath",
         "title": "%cmd.copyFilePath%"
       },
       {
-        "command": "git-worktree-manager.openRecent",
+        "command": "verition-worktree-manager.openRecent",
         "title": "%cmd.openRecent%",
         "icon": "$(search)"
       },
       {
-        "command": "git-worktree-manager.openFavorite",
+        "command": "verition-worktree-manager.openFavorite",
         "title": "%cmd.openFavorite%",
         "icon": "$(search)"
       },
       {
-        "command": "git-worktree-manager.openWorkspaceWorktree",
+        "command": "verition-worktree-manager.openWorkspaceWorktree",
         "title": "%cmd.searchAllWorktree%",
         "icon": "$(search)"
       },
       {
-        "command": "git-worktree-manager.addToGitFolder",
+        "command": "verition-worktree-manager.addToGitFolder",
         "title": "%cmd.addToGitFolder%"
       },
       {
-        "command": "git-worktree-manager.addRootsToRepo",
+        "command": "verition-worktree-manager.addRootsToRepo",
         "title": "%cmd.addToGitFolder%",
         "icon": "$(star-empty)"
       },
       {
-        "command": "git-worktree-manager.addToFavorite",
+        "command": "verition-worktree-manager.addToFavorite",
         "title": "%cmd.addToFavorite%",
         "icon": "$(pin)"
       },
       {
-        "command": "git-worktree-manager.checkoutBranch",
+        "command": "verition-worktree-manager.checkoutBranch",
         "title": "%cmd.checkoutBranch%",
         "icon": "$(source-control)",
         "category": "Worktree"
       },
       {
-        "command": "git-worktree-manager.gitFolderViewAsTree",
+        "command": "verition-worktree-manager.gitFolderViewAsTree",
         "title": "%cmd.viewAsList%",
         "icon": "$(list-tree)",
         "enablement": "gwm.context.gitFolderViewAsTree"
       },
       {
-        "command": "git-worktree-manager.gitFolderViewAsList",
+        "command": "verition-worktree-manager.gitFolderViewAsList",
         "title": "%cmd.viewAsTree%",
         "icon": "$(list-flat)",
         "enablement": "!gwm.context.gitFolderViewAsTree"
       },
       {
-        "command": "git-worktree-manager.gitFolderSetOpen",
+        "command": "verition-worktree-manager.gitFolderSetOpen",
         "title": "%cmd.gitFolderSetOpen%",
         "icon": "$(root-folder)"
       },
       {
-        "command": "git-worktree-manager.gitFolderSetClose",
+        "command": "verition-worktree-manager.gitFolderSetClose",
         "title": "%cmd.gitFolderSetClose%",
         "icon": "$(root-folder-opened)"
       },
       {
-        "command": "git-worktree-manager.searchAllWorktree",
+        "command": "verition-worktree-manager.searchAllWorktree",
         "title": "%cmd.searchAllWorktree%",
         "icon": "$(search)",
         "category": "Worktree"
       },
       {
-        "command": "git-worktree-manager.loadAllTreeData",
+        "command": "verition-worktree-manager.loadAllTreeData",
         "title": "%cmd.loadAllTreeData%",
         "icon": "$(unfold)"
       },
       {
-        "command": "git-worktree-manager.viewHistory",
+        "command": "verition-worktree-manager.viewHistory",
         "title": "%cmd.viewHistory%",
         "icon": "$(history)"
       },
       {
-        "command": "git-worktree-manager.fetchWorktree",
+        "command": "verition-worktree-manager.fetchWorktree",
         "title": "%cmd.fetchWorktree%",
         "icon": "$(repo-fetch)"
       },
       {
-        "command": "git-worktree-manager.fetchRepo",
+        "command": "verition-worktree-manager.fetchRepo",
         "title": "%cmd.fetchRepo%",
         "icon": "$(repo-fetch)"
       },
       {
-        "command": "git-worktree-manager.toggleLog",
+        "command": "verition-worktree-manager.toggleLog",
         "title": "%cmd.toggleLog%",
         "icon": "$(list-unordered)"
       },
       {
-        "command": "git-worktree-manager.openRepository",
+        "command": "verition-worktree-manager.openRepository",
         "title": "%cmd.openRepository%",
         "icon": "$(repo)"
       },
       {
-        "command": "git-worktree-manager.deleteBranch",
+        "command": "verition-worktree-manager.deleteBranch",
         "title": "%cmd.deleteBranch%"
       },
       {
-        "command": "git-worktree-manager.openSetting",
+        "command": "verition-worktree-manager.openSetting",
         "title": "%cmd.openSetting%",
         "icon": "$(gear)"
       },
       {
-        "command": "git-worktree-manager.bundleRepo",
+        "command": "verition-worktree-manager.bundleRepo",
         "title": "%cmd.backupRepo%",
         "icon": "$(archive)"
       }
     ],
     "keybindings": [
       {
-        "command": "git-worktree-manager.searchAllWorktree",
+        "command": "verition-worktree-manager.searchAllWorktree",
         "key": "ctrl+shift+r"
       }
     ],
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "git-worktree-manager",
+          "id": "verition-worktree-manager",
           "icon": "images/icon.svg",
-          "title": "%activitybar.git-worktree-manager%"
+          "title": "%activitybar.verition-worktree-manager%"
         }
       ]
     },
     "views": {
-      "git-worktree-manager": [
+      "verition-worktree-manager": [
         {
-          "id": "git-worktree-manager-list",
-          "name": "%view.git-worktree-manager-list%",
+          "id": "verition-worktree-manager-list",
+          "name": "%view.verition-worktree-manager-list%",
           "visibility": "visible",
-          "when": "!config.git-worktree-manager.treeView.toSCM"
+          "when": "!config.verition-worktree-manager.treeView.toSCM"
         },
         {
-          "id": "git-worktree-manager-folders",
-          "name": "%view.git-worktree-manager-folders%",
+          "id": "verition-worktree-manager-folders",
+          "name": "%view.verition-worktree-manager-folders%",
           "visibility": "visible",
-          "when": "!config.git-worktree-manager.treeView.toSCM"
+          "when": "!config.verition-worktree-manager.treeView.toSCM"
         },
         {
-          "id": "git-worktree-manager-recent",
-          "name": "%view.git-worktree-manager-recent%",
+          "id": "verition-worktree-manager-recent",
+          "name": "%view.verition-worktree-manager-recent%",
           "visibility": "collapsed"
         },
         {
-          "id": "git-worktree-manager-favorite",
-          "name": "%view.git-worktree-manager-favorite%",
+          "id": "verition-worktree-manager-favorite",
+          "name": "%view.verition-worktree-manager-favorite%",
           "visibility": "collapsed"
         },
         {
-          "id": "git-worktree-manager-setting",
-          "name": "%view.git-worktree-manager-setting%",
+          "id": "verition-worktree-manager-setting",
+          "name": "%view.verition-worktree-manager-setting%",
           "visibility": "visible"
         }
       ],
       "scm": [
         {
-          "id": "git-worktree-manager-list.scm",
-          "name": "%view.git-worktree-manager-list%",
+          "id": "verition-worktree-manager-list.scm",
+          "name": "%view.verition-worktree-manager-list%",
           "visibility": "visible",
-          "when": "config.git-worktree-manager.treeView.toSCM"
+          "when": "config.verition-worktree-manager.treeView.toSCM"
         },
         {
-          "id": "git-worktree-manager-folders.scm",
-          "name": "%view.git-worktree-manager-folders%",
+          "id": "verition-worktree-manager-folders.scm",
+          "name": "%view.verition-worktree-manager-folders%",
           "visibility": "visible",
-          "when": "config.git-worktree-manager.treeView.toSCM"
+          "when": "config.verition-worktree-manager.treeView.toSCM"
         }
       ]
     },
     "menus": {
       "view/title": [
         {
-          "command": "git-worktree-manager.refreshWorktree",
-          "when": "view =~ /git-worktree-manager-list/",
+          "command": "verition-worktree-manager.refreshWorktree",
+          "when": "view =~ /verition-worktree-manager-list/",
           "group": "navigation@100"
         },
         {
-          "command": "git-worktree-manager.openSetting",
-          "when": "view =~ /git-worktree-manager-list/",
+          "command": "verition-worktree-manager.openSetting",
+          "when": "view =~ /verition-worktree-manager-list/",
           "group": "navigation@90"
         },
         {
-          "command": "git-worktree-manager.viewHistory",
-          "when": "view =~ /git-worktree-manager-list/",
+          "command": "verition-worktree-manager.viewHistory",
+          "when": "view =~ /verition-worktree-manager-list/",
           "group": "navigation@20"
         },
         {
-          "command": "git-worktree-manager.addRootsToRepo",
-          "when": "view =~ /git-worktree-manager-list/ && gwm.context.addRootsToRepo",
+          "command": "verition-worktree-manager.addRootsToRepo",
+          "when": "view =~ /verition-worktree-manager-list/ && gwm.context.addRootsToRepo",
           "group": "navigation@1"
         },
         {
-          "command": "git-worktree-manager.addWorktree",
-          "when": "view =~ /git-worktree-manager-list/",
+          "command": "verition-worktree-manager.addWorktree",
+          "when": "view =~ /verition-worktree-manager-list/",
           "group": "navigation@2"
         },
         {
-          "command": "git-worktree-manager.openWorkspaceWorktree",
-          "when": "view =~ /git-worktree-manager-list/",
+          "command": "verition-worktree-manager.openWorkspaceWorktree",
+          "when": "view =~ /verition-worktree-manager-list/",
           "group": "navigation@3"
         },
         {
-          "command": "git-worktree-manager.pruneWorktree",
-          "when": "view =~ /git-worktree-manager-list/",
+          "command": "verition-worktree-manager.pruneWorktree",
+          "when": "view =~ /verition-worktree-manager-list/",
           "group": "navigation@5"
         },
         {
-          "command": "git-worktree-manager.toggleLog",
-          "when": "view =~ /git-worktree-manager-list/",
+          "command": "verition-worktree-manager.toggleLog",
+          "when": "view =~ /verition-worktree-manager-list/",
           "group": "navigation@10"
         },
         {
-          "command": "git-worktree-manager.addGitFolder",
-          "when": "view =~ /git-worktree-manager-folders/",
+          "command": "verition-worktree-manager.addGitFolder",
+          "when": "view =~ /verition-worktree-manager-folders/",
           "group": "navigation@1"
         },
         {
-          "command": "git-worktree-manager.removeMultiGitFolder",
-          "when": "view =~ /git-worktree-manager-folders/",
+          "command": "verition-worktree-manager.removeMultiGitFolder",
+          "when": "view =~ /verition-worktree-manager-folders/",
           "group": "navigation@1"
         },
         {
-          "command": "git-worktree-manager.removeMultiFavorite",
-          "when": "view =~ /git-worktree-manager-favorite/",
+          "command": "verition-worktree-manager.removeMultiFavorite",
+          "when": "view =~ /verition-worktree-manager-favorite/",
           "group": "navigation@1"
         },
         {
-          "command": "git-worktree-manager.gitFolderViewAsTree",
-          "when": "view =~ /git-worktree-manager-folders/ && gwm.context.gitFolderViewAsTree",
+          "command": "verition-worktree-manager.gitFolderViewAsTree",
+          "when": "view =~ /verition-worktree-manager-folders/ && gwm.context.gitFolderViewAsTree",
           "group": "navigation@2"
         },
         {
-          "command": "git-worktree-manager.gitFolderViewAsList",
-          "when": "view =~ /git-worktree-manager-folders/ && !gwm.context.gitFolderViewAsTree",
+          "command": "verition-worktree-manager.gitFolderViewAsList",
+          "when": "view =~ /verition-worktree-manager-folders/ && !gwm.context.gitFolderViewAsTree",
           "group": "navigation@2"
         },
         {
-          "command": "git-worktree-manager.searchAllWorktree",
-          "when": "view =~ /git-worktree-manager-folders/",
+          "command": "verition-worktree-manager.searchAllWorktree",
+          "when": "view =~ /verition-worktree-manager-folders/",
           "group": "navigation@3"
         },
         {
-          "command": "git-worktree-manager.refreshGitFolder",
-          "when": "view =~ /git-worktree-manager-folders/",
+          "command": "verition-worktree-manager.refreshGitFolder",
+          "when": "view =~ /verition-worktree-manager-folders/",
           "group": "navigation@5"
         },
         {
-          "command": "git-worktree-manager.refreshRecentFolder",
-          "when": "view === git-worktree-manager-recent",
+          "command": "verition-worktree-manager.refreshRecentFolder",
+          "when": "view === verition-worktree-manager-recent",
           "group": "navigation@2"
         },
         {
-          "command": "git-worktree-manager.openRecent",
-          "when": "view === git-worktree-manager-recent",
+          "command": "verition-worktree-manager.openRecent",
+          "when": "view === verition-worktree-manager-recent",
           "group": "navigation@1"
         },
         {
-          "command": "git-worktree-manager.refreshFavorite",
-          "when": "view === git-worktree-manager-favorite",
+          "command": "verition-worktree-manager.refreshFavorite",
+          "when": "view === verition-worktree-manager-favorite",
           "group": "navigation@100"
         },
         {
-          "command": "git-worktree-manager.openFavorite",
-          "when": "view === git-worktree-manager-favorite",
+          "command": "verition-worktree-manager.openFavorite",
+          "when": "view === verition-worktree-manager-favorite",
           "group": "navigation@90"
         }
       ],
       "view/item/context": [
         {
-          "command": "git-worktree-manager.openTerminal",
-          "when": "viewItem =~ /git-worktree-manager\\.(worktreeItem|gitFolderItem|folderItem)/",
+          "command": "verition-worktree-manager.openTerminal",
+          "when": "viewItem =~ /verition-worktree-manager\\.(worktreeItem|gitFolderItem|folderItem)/",
           "group": "terminal@2"
         },
         {
-          "command": "git-worktree-manager.openExternalTerminal.context",
-          "when": "viewItem =~ /git-worktree-manager\\.(worktreeItem|gitFolderItem|folderItem)/",
+          "command": "verition-worktree-manager.openExternalTerminal.context",
+          "when": "viewItem =~ /verition-worktree-manager\\.(worktreeItem|gitFolderItem|folderItem)/",
           "group": "terminal@1"
         },
         {
-          "command": "git-worktree-manager.addWorktreeFromBranch",
-          "when": "view =~ /git-worktree-manager-list/ && viewItem == git-worktree-manager.branchItem",
-          "group": "worktree-action"
+          "command": "verition-worktree-manager.addWorktreeFromBranch",
+          "when": "view =~ /verition-worktree-manager-list/ && viewItem == verition-worktree-manager.branchItem",
+          "group": "verition-worktree-action"
         },
         {
-          "command": "git-worktree-manager.revealInSystemExplorer.context",
-          "when": "viewItem =~ /git-worktree-manager\\.(worktreeItem|gitFolderItem|folderItem|workspaceItem|fileItem)/",
+          "command": "verition-worktree-manager.revealInSystemExplorer.context",
+          "when": "viewItem =~ /verition-worktree-manager\\.(worktreeItem|gitFolderItem|folderItem|workspaceItem|fileItem)/",
           "group": "file-action@0"
         },
         {
-          "command": "git-worktree-manager.renameGitFolder",
-          "when": "viewItem =~ /git-worktree-manager\\.(gitFolderItem)/",
+          "command": "verition-worktree-manager.renameGitFolder",
+          "when": "viewItem =~ /verition-worktree-manager\\.(gitFolderItem)/",
           "group": "file-action@1"
         },
         {
-          "command": "git-worktree-manager.addWorktree",
-          "when": "viewItem =~ /git-worktree-manager\\.(workspaceGitMainFolder|gitFolderItem)/",
+          "command": "verition-worktree-manager.addWorktree",
+          "when": "viewItem =~ /verition-worktree-manager\\.(workspaceGitMainFolder|gitFolderItem)/",
           "group": "inline@2"
         },
         {
-          "command": "git-worktree-manager.switchToSelectWorkspace",
-          "when": "viewItem =~ /git-worktree-manager.worktreeItem/",
+          "command": "verition-worktree-manager.switchToSelectWorkspace",
+          "when": "viewItem =~ /verition-worktree-manager.worktreeItem/",
           "group": "inline@100"
         },
         {
-          "command": "git-worktree-manager.fetchWorktree",
-          "when": "viewItem =~ /git-worktree-manager.worktreeItem(.*)\\.fetch/ && config.git-worktree-manager.treeView.showFetchInTreeItem",
+          "command": "verition-worktree-manager.fetchWorktree",
+          "when": "viewItem =~ /verition-worktree-manager.worktreeItem(.*)\\.fetch/ && config.verition-worktree-manager.treeView.showFetchInTreeItem",
           "group": "inline@9"
         },
         {
-          "command": "git-worktree-manager.pushWorktree",
-          "when": "viewItem =~ /git-worktree-manager.worktreeItem(.*)\\.ahead/",
+          "command": "verition-worktree-manager.pushWorktree",
+          "when": "viewItem =~ /verition-worktree-manager.worktreeItem(.*)\\.ahead/",
           "group": "inline@10"
         },
         {
-          "command": "git-worktree-manager.pullWorktree",
-          "when": "viewItem =~ /git-worktree-manager.worktreeItem(.*)\\.behind/",
+          "command": "verition-worktree-manager.pullWorktree",
+          "when": "viewItem =~ /verition-worktree-manager.worktreeItem(.*)\\.behind/",
           "group": "inline@10"
         },
         {
-          "command": "git-worktree-manager.openExternalTerminal",
-          "when": "viewItem =~ /git-worktree-manager\\.(worktreeItem|gitFolderItem|folderItem)/ && config.git-worktree-manager.treeView.showExternalTerminalInTreeItem",
+          "command": "verition-worktree-manager.openExternalTerminal",
+          "when": "viewItem =~ /verition-worktree-manager\\.(worktreeItem|gitFolderItem|folderItem)/ && config.verition-worktree-manager.treeView.showExternalTerminalInTreeItem",
           "group": "inline@12"
         },
         {
-          "command": "git-worktree-manager.openTerminal",
-          "when": "viewItem =~ /git-worktree-manager\\.(worktreeItem|gitFolderItem|folderItem)/ && config.git-worktree-manager.treeView.showTerminalInTreeItem",
+          "command": "verition-worktree-manager.openTerminal",
+          "when": "viewItem =~ /verition-worktree-manager\\.(worktreeItem|gitFolderItem|folderItem)/ && config.verition-worktree-manager.treeView.showTerminalInTreeItem",
           "group": "inline@12"
         },
         {
-          "command": "git-worktree-manager.revealInSystemExplorer",
-          "when": "viewItem =~ /git-worktree-manager\\.(worktreeItem|gitFolderItem|folderItem|workspaceItem|fileItem)/ && config.git-worktree-manager.treeView.showOpenExplorerInTreeItem",
+          "command": "verition-worktree-manager.revealInSystemExplorer",
+          "when": "viewItem =~ /verition-worktree-manager\\.(worktreeItem|gitFolderItem|folderItem|workspaceItem|fileItem)/ && config.verition-worktree-manager.treeView.showOpenExplorerInTreeItem",
           "group": "inline@12"
         },
         {
-          "command": "git-worktree-manager.checkoutBranch",
-          "when": "viewItem =~ /git-worktree-manager.worktreeItem.notBare/ && config.git-worktree-manager.treeView.showCheckoutInWorktreeItem",
+          "command": "verition-worktree-manager.checkoutBranch",
+          "when": "viewItem =~ /verition-worktree-manager.worktreeItem.notBare/ && config.verition-worktree-manager.treeView.showCheckoutInWorktreeItem",
           "group": "inline@15"
         },
         {
-          "command": "git-worktree-manager.openRepository",
-          "when": "viewItem =~ /git-worktree-manager.worktreeItem.notBare/ && config.git-worktree-manager.treeView.showOpenRepositoryInTreeItem",
+          "command": "verition-worktree-manager.openRepository",
+          "when": "viewItem =~ /verition-worktree-manager.worktreeItem.notBare/ && config.verition-worktree-manager.treeView.showOpenRepositoryInTreeItem",
           "group": "inline@16"
         },
         {
-          "command": "git-worktree-manager.lockWorktree",
-          "when": "viewItem =~ /git-worktree-manager.worktreeItem.notBare.unlock/ && config.git-worktree-manager.treeView.showLockInWorktreeItem",
+          "command": "verition-worktree-manager.lockWorktree",
+          "when": "viewItem =~ /verition-worktree-manager.worktreeItem.notBare.unlock/ && config.verition-worktree-manager.treeView.showLockInWorktreeItem",
           "group": "inline@20"
         },
         {
-          "command": "git-worktree-manager.unlockWorktree",
-          "when": "viewItem =~ /git-worktree-manager.worktreeItem.notBare.lock/ && config.git-worktree-manager.treeView.showLockInWorktreeItem",
+          "command": "verition-worktree-manager.unlockWorktree",
+          "when": "viewItem =~ /verition-worktree-manager.worktreeItem.notBare.lock/ && config.verition-worktree-manager.treeView.showLockInWorktreeItem",
           "group": "inline@20"
         },
         {
-          "command": "git-worktree-manager.checkoutBranch",
-          "when": "viewItem =~ /git-worktree-manager.worktreeItem.notBare/",
+          "command": "verition-worktree-manager.checkoutBranch",
+          "when": "viewItem =~ /verition-worktree-manager.worktreeItem.notBare/",
           "group": "git-action"
         },
         {
-          "command": "git-worktree-manager.openRepository",
-          "when": "viewItem =~ /git-worktree-manager.worktreeItem.notBare/",
+          "command": "verition-worktree-manager.openRepository",
+          "when": "viewItem =~ /verition-worktree-manager.worktreeItem.notBare/",
           "group": "git-action"
         },
         {
-          "command": "git-worktree-manager.fetchRepo",
-          "when": "viewItem =~ /git-worktree-manager.gitFolderItem/ && config.git-worktree-manager.treeView.showFetchInTreeItem",
+          "command": "verition-worktree-manager.fetchRepo",
+          "when": "viewItem =~ /verition-worktree-manager.gitFolderItem/ && config.verition-worktree-manager.treeView.showFetchInTreeItem",
           "group": "inline@1"
         },
         {
-          "command": "git-worktree-manager.renameGitFolder",
-          "when": "viewItem =~ /git-worktree-manager.gitFolderItem/",
+          "command": "verition-worktree-manager.renameGitFolder",
+          "when": "viewItem =~ /verition-worktree-manager.gitFolderItem/",
           "group": "inline@1"
         },
         {
-          "command": "git-worktree-manager.viewHistory",
-          "when": "viewItem =~ /git-worktree-manager.(gitFolderItem|workspaceGitMainFolder)/",
+          "command": "verition-worktree-manager.viewHistory",
+          "when": "viewItem =~ /verition-worktree-manager.(gitFolderItem|workspaceGitMainFolder)/",
           "group": "inline@1"
         },
         {
-          "command": "git-worktree-manager.gitFolderSetOpen",
-          "when": "viewItem =~ /git-worktree-manager.gitFolderItem(.*)\\.defaultClose/",
+          "command": "verition-worktree-manager.gitFolderSetOpen",
+          "when": "viewItem =~ /verition-worktree-manager.gitFolderItem(.*)\\.defaultClose/",
           "group": "inline@2"
         },
         {
-          "command": "git-worktree-manager.gitFolderSetClose",
-          "when": "viewItem =~ /git-worktree-manager.gitFolderItem(.*)\\.defaultOpen/",
+          "command": "verition-worktree-manager.gitFolderSetClose",
+          "when": "viewItem =~ /verition-worktree-manager.gitFolderItem(.*)\\.defaultOpen/",
           "group": "inline@2"
         },
         {
-          "command": "git-worktree-manager.bundleRepo",
-          "when": "viewItem =~ /git-worktree-manager.gitFolderItem/",
+          "command": "verition-worktree-manager.bundleRepo",
+          "when": "viewItem =~ /verition-worktree-manager.gitFolderItem/",
           "group": "inline@4"
         },
         {
-          "command": "git-worktree-manager.removeGitFolder",
-          "when": "viewItem =~ /git-worktree-manager.gitFolderItem/",
+          "command": "verition-worktree-manager.removeGitFolder",
+          "when": "viewItem =~ /verition-worktree-manager.gitFolderItem/",
           "group": "inline@100"
         },
         {
-          "command": "git-worktree-manager.removeFavorite",
-          "when": "view === git-worktree-manager-favorite && viewItem =~ /git-worktree-manager.(folderItem|workspaceItem|fileItem)/",
+          "command": "verition-worktree-manager.removeFavorite",
+          "when": "view === verition-worktree-manager-favorite && viewItem =~ /verition-worktree-manager.(folderItem|workspaceItem|fileItem)/",
           "group": "inline@100"
         },
         {
-          "command": "git-worktree-manager.addToWorkspace",
-          "when": "viewItem =~ /git-worktree-manager.worktreeItem/ && !(viewItem =~ /git-worktree-manager\\.worktreeItem(.*)\\.current/)",
+          "command": "verition-worktree-manager.addToWorkspace",
+          "when": "viewItem =~ /verition-worktree-manager.worktreeItem/ && !(viewItem =~ /verition-worktree-manager\\.worktreeItem(.*)\\.current/)",
           "group": "workspace@1"
         },
         {
-          "command": "git-worktree-manager.removeFromWorkspace",
-          "when": "viewItem =~ /git-worktree-manager.worktreeItem/ && viewItem =~ /git-worktree-manager\\.worktreeItem(.*)\\.current/",
+          "command": "verition-worktree-manager.removeFromWorkspace",
+          "when": "viewItem =~ /verition-worktree-manager.worktreeItem/ && viewItem =~ /verition-worktree-manager\\.worktreeItem(.*)\\.current/",
           "group": "workspace@1"
         },
         {
-          "command": "git-worktree-manager.copyFilePath",
-          "when": "viewItem =~ /git-worktree-manager.worktreeItem/",
+          "command": "verition-worktree-manager.copyFilePath",
+          "when": "viewItem =~ /verition-worktree-manager.worktreeItem/",
           "group": "workspace@2"
         },
         {
-          "command": "git-worktree-manager.addToWorkspace",
-          "when": "viewItem =~ /git-worktree-manager.folderItem/",
+          "command": "verition-worktree-manager.addToWorkspace",
+          "when": "viewItem =~ /verition-worktree-manager.folderItem/",
           "group": "workspace@2"
         },
         {
-          "command": "git-worktree-manager.copyFilePath",
-          "when": "viewItem =~ /git-worktree-manager.(folderItem|fileItem)/",
+          "command": "verition-worktree-manager.copyFilePath",
+          "when": "viewItem =~ /verition-worktree-manager.(folderItem|fileItem)/",
           "group": "workspace@3"
         },
         {
-          "command": "git-worktree-manager.addToGitFolder",
-          "when": "view === git-worktree-manager-recent && viewItem =~ /git-worktree-manager.folderItem/",
+          "command": "verition-worktree-manager.addToGitFolder",
+          "when": "view === verition-worktree-manager-recent && viewItem =~ /verition-worktree-manager.folderItem/",
           "group": "workspace@1"
         },
         {
-          "command": "git-worktree-manager.addToFavorite",
-          "when": "view === git-worktree-manager-recent && viewItem =~ /git-worktree-manager.(folderItem|workspaceItem|fileItem)/",
+          "command": "verition-worktree-manager.addToFavorite",
+          "when": "view === verition-worktree-manager-recent && viewItem =~ /verition-worktree-manager.(folderItem|workspaceItem|fileItem)/",
           "group": "workspace@1"
         },
         {
-          "command": "git-worktree-manager.switchToSelectWorkspace",
-          "when": "viewItem =~ /git-worktree-manager.(folderItem|workspaceItem|fileItem)/",
+          "command": "verition-worktree-manager.switchToSelectWorkspace",
+          "when": "viewItem =~ /verition-worktree-manager.(folderItem|workspaceItem|fileItem)/",
           "group": "inline@100"
         },
         {
-          "group": "worktree-action",
-          "when": "viewItem =~ /git-worktree-manager.worktreeItem/ && !(viewItem =~ /git-worktree-manager\\.worktreeItem(.*)\\.main/)",
-          "submenu": "worktree-action"
+          "group": "verition-worktree-action",
+          "when": "viewItem =~ /verition-worktree-manager.worktreeItem/ && !(viewItem =~ /verition-worktree-manager\\.worktreeItem(.*)\\.main/)",
+          "submenu": "verition-worktree-action"
         },
         {
-          "command": "git-worktree-manager.loadAllTreeData",
-          "when": "viewItem =~ /git-worktree-manager.loadMore/",
+          "command": "verition-worktree-manager.loadAllTreeData",
+          "when": "viewItem =~ /verition-worktree-manager.loadMore/",
           "group": "inline@100"
         }
       ],
-      "worktree-action": [
+      "verition-worktree-action": [
         {
-          "command": "git-worktree-manager.repairWorktree",
-          "when": "viewItem =~ /git-worktree-manager.worktreeItem/",
-          "group": "worktree-action"
+          "command": "verition-worktree-manager.repairWorktree",
+          "when": "viewItem =~ /verition-worktree-manager.worktreeItem/",
+          "group": "verition-worktree-action"
         },
         {
-          "command": "git-worktree-manager.moveWorktree",
-          "when": "viewItem =~ /git-worktree-manager.worktreeItem/",
-          "group": "worktree-action"
+          "command": "verition-worktree-manager.moveWorktree",
+          "when": "viewItem =~ /verition-worktree-manager.worktreeItem/",
+          "group": "verition-worktree-action"
         },
         {
-          "command": "git-worktree-manager.removeWorktree",
-          "when": "viewItem =~ /git-worktree-manager.worktreeItem/",
+          "command": "verition-worktree-manager.removeWorktree",
+          "when": "viewItem =~ /verition-worktree-manager.worktreeItem/",
           "group": "worktree-delete"
         },
         {
-          "command": "git-worktree-manager.lockWorktree",
-          "when": "viewItem =~ /git-worktree-manager\\.worktreeItem(.*)\\.unlock/",
+          "command": "verition-worktree-manager.lockWorktree",
+          "when": "viewItem =~ /verition-worktree-manager\\.worktreeItem(.*)\\.unlock/",
           "group": "worktree-lock"
         },
         {
-          "command": "git-worktree-manager.unlockWorktree",
-          "when": "viewItem =~ /git-worktree-manager\\.worktreeItem(.*)\\.lock/",
+          "command": "verition-worktree-manager.unlockWorktree",
+          "when": "viewItem =~ /verition-worktree-manager\\.worktreeItem(.*)\\.lock/",
           "group": "worktree-lock"
         }
       ],
       "commandPalette": [
         {
-          "command": "git-worktree-manager.switchToSelectWorkspace",
+          "command": "verition-worktree-manager.switchToSelectWorkspace",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.refreshWorktree",
+          "command": "verition-worktree-manager.refreshWorktree",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.refreshGitFolder",
+          "command": "verition-worktree-manager.refreshGitFolder",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.refreshRecentFolder",
+          "command": "verition-worktree-manager.refreshRecentFolder",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.refreshFavorite",
+          "command": "verition-worktree-manager.refreshFavorite",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.gitFolderViewAsTree",
+          "command": "verition-worktree-manager.gitFolderViewAsTree",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.gitFolderViewAsList",
+          "command": "verition-worktree-manager.gitFolderViewAsList",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.removeWorktree",
+          "command": "verition-worktree-manager.removeWorktree",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.addWorktreeFromBranch",
+          "command": "verition-worktree-manager.addWorktreeFromBranch",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.revealInSystemExplorer",
+          "command": "verition-worktree-manager.revealInSystemExplorer",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.revealInSystemExplorer.context",
+          "command": "verition-worktree-manager.revealInSystemExplorer.context",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.repairWorktree",
+          "command": "verition-worktree-manager.repairWorktree",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.moveWorktree",
+          "command": "verition-worktree-manager.moveWorktree",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.lockWorktree",
+          "command": "verition-worktree-manager.lockWorktree",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.unlockWorktree",
+          "command": "verition-worktree-manager.unlockWorktree",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.pruneWorktree",
+          "command": "verition-worktree-manager.pruneWorktree",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.removeGitFolder",
+          "command": "verition-worktree-manager.removeGitFolder",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.renameGitFolder",
+          "command": "verition-worktree-manager.renameGitFolder",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.gitFolderSetOpen",
+          "command": "verition-worktree-manager.gitFolderSetOpen",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.gitFolderSetClose",
+          "command": "verition-worktree-manager.gitFolderSetClose",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.openTerminal",
+          "command": "verition-worktree-manager.openTerminal",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.openExternalTerminal",
+          "command": "verition-worktree-manager.openExternalTerminal",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.openExternalTerminal.context",
+          "command": "verition-worktree-manager.openExternalTerminal.context",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.copyFilePath",
+          "command": "verition-worktree-manager.copyFilePath",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.addToGitFolder",
+          "command": "verition-worktree-manager.addToGitFolder",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.addToWorkspace",
+          "command": "verition-worktree-manager.addToWorkspace",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.removeFromWorkspace",
+          "command": "verition-worktree-manager.removeFromWorkspace",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.loadAllTreeData",
+          "command": "verition-worktree-manager.loadAllTreeData",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.viewHistory",
+          "command": "verition-worktree-manager.viewHistory",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.pullWorktree",
+          "command": "verition-worktree-manager.pullWorktree",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.pushWorktree",
+          "command": "verition-worktree-manager.pushWorktree",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.openRepository",
+          "command": "verition-worktree-manager.openRepository",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.deleteBranch",
+          "command": "verition-worktree-manager.deleteBranch",
           "when": "false"
         },
         {
-          "command": "git-worktree-manager.bundleRepo",
+          "command": "verition-worktree-manager.bundleRepo",
           "when": "false"
         }
       ]
@@ -816,8 +816,8 @@
     "submenus": [
       {
         "icon": "$(source-control)",
-        "id": "worktree-action",
-        "label": "%submenus.worktree-action%"
+        "id": "verition-worktree-action",
+        "label": "%submenus.verition-worktree-action%"
       }
     ],
     "configuration": [
@@ -825,14 +825,14 @@
         "title": "%config.general.title%",
         "order": 0,
         "properties": {
-          "git-worktree-manager.terminalLocationInEditor": {
+          "verition-worktree-manager.terminalLocationInEditor": {
             "order": 3,
             "scope": "application",
             "type": "boolean",
             "default": false,
             "description": "%config.terminalLocationInEditor.description%"
           },
-          "git-worktree-manager.terminalCmdList": {
+          "verition-worktree-manager.terminalCmdList": {
             "order": 10,
             "scope": "application",
             "type": "array",
@@ -842,7 +842,7 @@
             },
             "description": "%config.terminalCmdList.description%"
           },
-          "git-worktree-manager.alertLevel": {
+          "verition-worktree-manager.alertLevel": {
             "order": 0,
             "scope": "application",
             "enum": [
@@ -858,12 +858,12 @@
             "default": "error",
             "description": "%config.alertLevel.description%"
           },
-          "git-worktree-manager.openSubpath": {
+          "verition-worktree-manager.openSubpath": {
             "type": "string",
             "default": "",
             "description": "Optional subfolder to open under each worktree. If empty, open the worktree root."
           },
-          "git-worktree-manager.gitHistoryExtension": {
+          "verition-worktree-manager.gitHistoryExtension": {
             "order": 1,
             "scope": "application",
             "enum": [
@@ -877,35 +877,35 @@
             "default": "vscode.git",
             "description": "%config.gitHistoryExtension.description%"
           },
-          "git-worktree-manager.openInsideFolder": {
+          "verition-worktree-manager.openInsideFolder": {
             "order": 2,
             "scope": "application",
             "type": "boolean",
             "default": true,
             "markdownDescription": "%config.openInsideFolder.description%"
           },
-          "git-worktree-manager.httpProxy": {
+          "verition-worktree-manager.httpProxy": {
             "order": 9,
             "scope": "machine",
             "type": "string",
             "default": "",
             "markdownDescription": "%config.httpProxy.description%"
           },
-          "git-worktree-manager.workspacePathFormat": {
+          "verition-worktree-manager.workspacePathFormat": {
             "order": 6,
             "scope": "application",
             "type": "string",
             "default": "$BASE_NAME - $FULL_PATH",
             "markdownDescription": "%config.workspacePathFormat.description%"
           },
-          "git-worktree-manager.promptDeleteBranchAfterWorktreeDeletion": {
+          "verition-worktree-manager.promptDeleteBranchAfterWorktreeDeletion": {
             "order": 5,
             "scope": "application",
             "type": "boolean",
             "default": false,
             "description": "%config.promptDeleteBranchAfterWorktreeDeletion.description%"
           },
-          "git-worktree-manager.worktreeCopyPatterns": {
+          "verition-worktree-manager.worktreeCopyPatterns": {
             "order": 7,
             "type": "array",
             "items": {
@@ -918,7 +918,7 @@
             ],
             "markdownDescription": "%config.worktreeCopyPatterns.description%"
           },
-          "git-worktree-manager.worktreeCopyIgnores": {
+          "verition-worktree-manager.worktreeCopyIgnores": {
             "order": 8,
             "type": "array",
             "items": {
@@ -936,20 +936,20 @@
             ],
             "markdownDescription": "%config.worktreeCopyIgnores.description%"
           },
-          "git-worktree-manager.checkoutIgnoreOtherWorktree": {
+          "verition-worktree-manager.checkoutIgnoreOtherWorktree": {
             "order": 4,
             "scope": "application",
             "type": "boolean",
             "default": false,
             "description": "%config.checkoutIgnoreOtherWorktree.description%"
           },
-          "git-worktree-manager.worktreePathTemplate": {
+          "verition-worktree-manager.worktreePathTemplate": {
             "order": 11,
             "type": "string",
             "default": "$BASE_PATH.worktree",
             "description": "%config.worktreePathTemplate.description%"
           },
-          "git-worktree-manager.worktreeSubdirectoryTemplate": {
+          "verition-worktree-manager.worktreeSubdirectoryTemplate": {
             "order": 12,
             "type": "string",
             "default": "worktree$INDEX",
@@ -957,13 +957,13 @@
             "patternErrorMessage": "%config.worktreeSubdirectoryTemplate.patternErrorMessage%",
             "description": "%config.worktreeSubdirectoryTemplate.description%"
           },
-          "git-worktree-manager.postCreateCmd": {
+          "verition-worktree-manager.postCreateCmd": {
             "order": 13,
             "type": "string",
             "default": "",
             "markdownDescription": "%config.postCreateCmd.description%"
           },
-          "git-worktree-manager.terminalNameTemplate": {
+          "verition-worktree-manager.terminalNameTemplate": {
             "order": 14,
             "type": "string",
             "default": "$LABEL ⇄ $FULL_PATH",
@@ -974,63 +974,63 @@
       {
         "title": "%config.treeView.title%",
         "properties": {
-          "git-worktree-manager.treeView.toSCM": {
+          "verition-worktree-manager.treeView.toSCM": {
             "order": 0,
             "scope": "application",
             "type": "boolean",
             "default": false,
             "description": "%config.treeView.toSCM.description%"
           },
-          "git-worktree-manager.treeView.showLockInWorktreeItem": {
+          "verition-worktree-manager.treeView.showLockInWorktreeItem": {
             "order": 7,
             "scope": "application",
             "type": "boolean",
             "default": false,
             "description": "%config.showLockInWorktreeItem.description%"
           },
-          "git-worktree-manager.treeView.showOpenExplorerInTreeItem": {
+          "verition-worktree-manager.treeView.showOpenExplorerInTreeItem": {
             "order": 3,
             "scope": "application",
             "type": "boolean",
             "default": true,
             "description": "%config.showOpenExplorerInTreeItem.description%"
           },
-          "git-worktree-manager.treeView.showCheckoutInWorktreeItem": {
+          "verition-worktree-manager.treeView.showCheckoutInWorktreeItem": {
             "order": 5,
             "scope": "application",
             "type": "boolean",
             "default": true,
             "description": "%config.showCheckoutInWorktreeItem.description%"
           },
-          "git-worktree-manager.treeView.showExternalTerminalInTreeItem": {
+          "verition-worktree-manager.treeView.showExternalTerminalInTreeItem": {
             "order": 1,
             "scope": "application",
             "type": "boolean",
             "default": true,
             "description": "%config.showExternalTerminalInTreeItem.description%"
           },
-          "git-worktree-manager.treeView.showTerminalInTreeItem": {
+          "verition-worktree-manager.treeView.showTerminalInTreeItem": {
             "order": 2,
             "scope": "application",
             "type": "boolean",
             "default": true,
             "description": "%config.showTerminalInTreeItem.description%"
           },
-          "git-worktree-manager.treeView.showFetchInTreeItem": {
+          "verition-worktree-manager.treeView.showFetchInTreeItem": {
             "order": 6,
             "scope": "application",
             "type": "boolean",
             "default": true,
             "description": "%config.showFetchInTreeItem.description%"
           },
-          "git-worktree-manager.treeView.showOpenRepositoryInTreeItem": {
+          "verition-worktree-manager.treeView.showOpenRepositoryInTreeItem": {
             "order": 4,
             "scope": "application",
             "type": "boolean",
             "default": true,
             "description": "%config.showOpenRepositoryInTreeItem.description%"
           },
-          "git-worktree-manager.treeView.worktreeDescriptionTemplate": {
+          "verition-worktree-manager.treeView.worktreeDescriptionTemplate": {
             "order": 8,
             "type": "string",
             "default": "$FULL_PATH",
@@ -1041,14 +1041,14 @@
       {
         "title": "%config.findWorktree.title%",
         "properties": {
-          "git-worktree-manager.worktreePick.pinCurrentRepo": {
+          "verition-worktree-manager.worktreePick.pinCurrentRepo": {
             "order": 1,
             "scope": "application",
             "type": "boolean",
             "default": true,
             "description": "%config.pinCurrentRepo.description%"
           },
-          "git-worktree-manager.worktreePick.defaultDisplayList": {
+          "verition-worktree-manager.worktreePick.defaultDisplayList": {
             "order": 2,
             "scope": "application",
             "enum": [
@@ -1066,70 +1066,70 @@
             "default": "workspace",
             "description": "%config.defaultDisplayList.description%"
           },
-          "git-worktree-manager.worktreePick.showTerminal": {
+          "verition-worktree-manager.worktreePick.showTerminal": {
             "order": 4,
             "scope": "application",
             "type": "boolean",
             "default": true,
             "description": "%config.worktreePick.showTerminal.description%"
           },
-          "git-worktree-manager.worktreePick.showExternalTerminal": {
+          "verition-worktree-manager.worktreePick.showExternalTerminal": {
             "order": 5,
             "scope": "application",
             "type": "boolean",
             "default": true,
             "description": "%config.worktreePick.showExternalTerminal.description%"
           },
-          "git-worktree-manager.worktreePick.showRevealInSystemExplorer": {
+          "verition-worktree-manager.worktreePick.showRevealInSystemExplorer": {
             "order": 6,
             "scope": "application",
             "type": "boolean",
             "default": true,
             "description": "%config.worktreePick.showRevealInSystemExplorer.description%"
           },
-          "git-worktree-manager.worktreePick.showCopy": {
+          "verition-worktree-manager.worktreePick.showCopy": {
             "order": 8,
             "scope": "application",
             "type": "boolean",
             "default": true,
             "description": "%config.worktreePick.showCopy.description%"
           },
-          "git-worktree-manager.worktreePick.showAddToWorkspace": {
+          "verition-worktree-manager.worktreePick.showAddToWorkspace": {
             "order": 7,
             "scope": "application",
             "type": "boolean",
             "default": true,
             "description": "%config.worktreePick.showAddToWorkspace.description%"
           },
-          "git-worktree-manager.worktreePick.copyTemplate": {
+          "verition-worktree-manager.worktreePick.copyTemplate": {
             "order": 9,
             "scope": "application",
             "type": "string",
             "default": "$LABEL",
             "markdownDescription": "%config.worktreePick.copyTemplate.description%"
           },
-          "git-worktree-manager.worktreePick.showCheckout": {
+          "verition-worktree-manager.worktreePick.showCheckout": {
             "order": 3,
             "scope": "application",
             "type": "boolean",
             "default": true,
             "markdownDescription": "%config.worktreePick.showCheckout.description%"
           },
-          "git-worktree-manager.worktreePick.showViewHistory": {
+          "verition-worktree-manager.worktreePick.showViewHistory": {
             "order": 10,
             "scope": "application",
             "type": "boolean",
             "default": true,
             "markdownDescription": "%config.worktreePick.showViewHistory.description%"
           },
-          "git-worktree-manager.worktreePick.showOpenRepository": {
+          "verition-worktree-manager.worktreePick.showOpenRepository": {
             "order": 11,
             "scope": "application",
             "type": "boolean",
             "default": true,
             "markdownDescription": "%config.worktreePick.showOpenRepository.description%"
           },
-          "git-worktree-manager.worktreePick.showRemoveWorktree": {
+          "verition-worktree-manager.worktreePick.showRemoveWorktree": {
             "order": 12,
             "scope": "application",
             "type": "boolean",
@@ -1141,14 +1141,14 @@
       {
         "title": "%config.pickBranch.title%",
         "properties": {
-          "git-worktree-manager.branchPick.showDeleteBranch": {
+          "verition-worktree-manager.branchPick.showDeleteBranch": {
             "order": 0,
             "scope": "application",
             "type": "boolean",
             "default": true,
             "markdownDescription": "%config.branchPick.showDeleteBranch.description%"
           },
-          "git-worktree-manager.branchPick.showRenameBranch": {
+          "verition-worktree-manager.branchPick.showRenameBranch": {
             "order": 1,
             "scope": "application",
             "type": "boolean",

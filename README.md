@@ -1,11 +1,14 @@
 
-# Git Worktree Manager for VSCode
+# Verition Worktree Manager for VS Code
 
-[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/jackiotyu.git-worktree-manager)](https://marketplace.visualstudio.com/items?itemName=jackiotyu.git-worktree-manager)
-[![GitHub release](https://img.shields.io/github/v/release/jackiotyu/git-worktree-manager)](https://github.com/jackiotyu/git-worktree-manager/releases)
-[![GitHub Open Issues](https://img.shields.io/github/issues/jackiotyu/git-worktree-manager)](https://github.com/jackiotyu/git-worktree-manager/issues)
-[![License](https://img.shields.io/github/license/jackiotyu/git-worktree-manager)](https://github.com/jackiotyu/git-worktree-manager/blob/main/LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/jackiotyu/git-worktree-manager)](https://github.com/jackiotyu/git-worktree-manager)
+A fork of [jackiotyu/git-worktree-manager](https://github.com/jackiotyu/git-worktree-manager),  
+enhanced with **openSubpath support** — allowing you to automatically open a specific subfolder inside each worktree.
+
+[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/vnehruji.verition-worktree-manager)](https://marketplace.visualstudio.com/items?itemName=vnehruji.verition-worktree-manager)
+[![GitHub release](https://img.shields.io/github/v/release/vnehruji/verition-worktree-manager)](https://github.com/vnehruji/verition-worktree-manager/releases)
+[![GitHub Open Issues](https://img.shields.io/github/issues/vnehruji/verition-worktree-manager)](https://github.com/vnehruji/verition-worktree-manager/issues)
+[![License](https://img.shields.io/github/license/vnehruji/verition-worktree-manager)](https://github.com/vnehruji/verition-worktree-manager/blob/main/LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/vnehruji/verition-worktree-manager)](https://github.com/vnehruji/verition-worktree-manager)
 
 English | [简体中文](./README.zh-CN.md)
 
@@ -13,24 +16,8 @@ Effortlessly manage Git worktrees in Visual Studio Code! 🚀 Simplify your work
 
 <img src="./images/overview.png" width="800" />
 
-## Support 💖
 
-If you enjoy this extension, consider giving it a [star ⭐](https://github.com/jackiotyu/git-worktree-manager) and sharing it on social platforms like [X.com](https://x.com/intent/post?text=Check%20out%20this%20awesome%20VSCode%20extension%20for%20managing%20Git%20worktrees!!%20https%3A%2F%2Fgithub.com%2Fjackiotyu%2Fgit-worktree-manager)—it really helps!
-<table>
-  <tr>
-    <td align="center">
-      <img src="./images/donate/paypal.png" width="200" alt="PayPal Donate"/><br/>
-      <b>PayPal</b>
-    </td>
-    <td align="center">
-      <img src="./images/donate/wechat.png" width="200" alt="WeChat Donate"/><br/>
-      <b>微信</b>
-    </td>
-  </tr>
-</table>
-
-
-## Why Git Worktree Manager? 🌟
+## Why Git Worktree Manager? - From jackiotyu 🌟
 
 Tired of juggling branches, stashing changes, or resolving merge conflicts? **Git Worktree Manager** makes parallel development a breeze by leveraging Git worktrees, letting you work on multiple branches in separate directories without leaving VSCode. Whether you’re tackling hotfixes, experimenting with features, or managing complex projects, this extension saves time, reduces friction, and keeps your workspace organized. With seamless integration and intuitive controls, it’s the ultimate tool for developers who want a smoother Git experience.
 
@@ -58,8 +45,8 @@ Tired of juggling branches, stashing changes, or resolving merge conflicts? **Gi
 ## Getting Started 🚀
 
 1. **Install the Extension**:
-   - Download from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=jackiotyu.git-worktree-manager).
-   - Or search for "Git Worktree Manager" in VSCode’s Extensions view and install.
+   - Download from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vnehruji.verition-worktree-manager).
+   - Or search for "Verition Worktree Manager" in VSCode’s Extensions view and install.
 
 2. **Quick Start**:
    - Open VSCode in a Git repository.
@@ -75,9 +62,20 @@ Tired of juggling branches, stashing changes, or resolving merge conflicts? **Gi
 ## Configuration ⚙️
 
 Customize your experience:
-- **`git-worktree-manager.treeView.toSCM`**: Display worktrees in the Source Control view.
+- **`verition-worktree-manager.treeView.toSCM`**: Display worktrees in the Source Control view.
 - **`terminal.external.windowsExec`**: Set your preferred terminal (e.g., `"C:\\Program Files\\Git\\bin\\bash.exe"` for Git Bash).
 - **`terminal.external.osxExec`**: Use iTerm or another terminal on macOS (e.g., `"iTerm.app"`).
+
+## New Feature: `openSubpath`
+
+You can tell the extension to open a specific subfolder inside each worktree.  
+Add to your `settings.json`:
+
+```json
+{
+  "verition-worktree-manager.openSubpath": "analytics",
+}
+```
 
 ## Contributing 🤝
 
@@ -88,8 +86,11 @@ We love contributions! Here’s how to get involved:
 4. Push to the branch (`git push origin feature/awesome-idea`).
 5. Open a Pull Request.
 
-Have ideas? Open an issue with the "enhancement" tag or explore [open issues](https://github.com/jackiotyu/git-worktree-manager/issues).
+Have ideas? Open an issue with the "enhancement" tag or explore [open issues](https://github.com/vnehruji/git-worktree-manager/issues).
 
 ## License 📜
+
+This project is based on [jackiotyu/git-worktree-manager](https://github.com/jackiotyu/git-worktree-manager) (MIT License).  
+Additional modifications © 2025 Verition Fund and contributors.
 
 Distributed under the [MIT License](LICENSE). Use, modify, and share freely!

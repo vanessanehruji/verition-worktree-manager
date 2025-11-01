@@ -24,7 +24,7 @@ export class GitFolderItem extends vscode.TreeItem implements IWorktreeLess {
         this.fsPath = uri.fsPath;
         this.defaultOpen = !!item.defaultOpen;
         this.iconPath = new vscode.ThemeIcon('repo');
-        this.contextValue = `git-worktree-manager.gitFolderItem.${this.defaultOpen ? 'defaultOpen' : 'defaultClose'}`;
+        this.contextValue = `verition-worktree-manager.gitFolderItem.${this.defaultOpen ? 'defaultOpen' : 'defaultClose'}`;
     }
 
     private setTooltip(item: IFolderItemConfig) {

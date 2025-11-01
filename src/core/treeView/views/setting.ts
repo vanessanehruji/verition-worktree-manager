@@ -29,7 +29,7 @@ const menuItems: MenuItemConfig[] = [
         command: {
             command: 'vscode.open',
             title: '',
-            arguments: [vscode.Uri.parse('https://github.com/jackiotyu/git-worktree-manager/issues')]
+            arguments: [vscode.Uri.parse('https://github.com/vnehruji/verition-worktree-manager/issues')]
         },
     }
 ];

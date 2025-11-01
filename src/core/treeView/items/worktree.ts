@@ -134,7 +134,7 @@ export class WorktreeItem extends vscode.TreeItem implements IWorktreeLess {
         const behindPost = this.behind ? '.behind' : '';
         const fetchPost = this.upstream ? '.fetch' : '';
         const notBare = item.isBare ? '' : '.notBare';
-        this.contextValue = `git-worktree-manager.worktreeItem${notBare}${mainPost}${lockPost}${currentPost}${aheadPost}${behindPost}${fetchPost}`;
+        this.contextValue = `verition-worktree-manager.worktreeItem${notBare}${mainPost}${lockPost}${currentPost}${aheadPost}${behindPost}${fetchPost}`;
     }
 
     private setTooltip() {

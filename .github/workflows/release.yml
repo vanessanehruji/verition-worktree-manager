@@ -3,13 +3,13 @@ name: Release
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - "v*.*.*"
 
 jobs:
   release:
     runs-on: ubuntu-latest
     permissions:
-        contents: write
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -26,9 +26,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '>=20.18.2'
-          registry-url: 'https://registry.npmjs.org'
-          cache: 'pnpm'
+          node-version: ">=20.18.2"
+          registry-url: "https://registry.npmjs.org"
+          cache: "pnpm"
 
       - run: npx changelogithub
         env:
@@ -38,12 +38,12 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Package VSIX
-        run: pnpm exec vsce package --no-dependencies --out ./git-worktree-manager-${{ github.ref_name }}.vsix
+        run: pnpm exec vsce package --no-dependencies --out ./verition-worktree-manager-${{ github.ref_name }}.vsix
 
       - name: Upload Release Artifact
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload ${{ github.ref_name }} ./git-worktree-manager-${{ github.ref_name }}.vsix
+        run: gh release upload ${{ github.ref_name }} ./verition-worktree-manager-${{ github.ref_name }}.vsix
 
       - name: Publish Extension to VSCode Marketplace
         run: pnpm exec vsce publish -p ${{ secrets.VSCE_TOKEN }} --no-dependencies

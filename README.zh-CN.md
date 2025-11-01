@@ -2,11 +2,11 @@
 
 
 
-[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/jackiotyu.git-worktree-manager)](https://marketplace.visualstudio.com/items?itemName=jackiotyu.git-worktree-manager)
-[![GitHub release](https://img.shields.io/github/v/release/jackiotyu/git-worktree-manager)](https://github.com/jackiotyu/git-worktree-manager/releases)
-[![GitHub Open Issues](https://img.shields.io/github/issues/jackiotyu/git-worktree-manager)](https://github.com/jackiotyu/git-worktree-manager/issues)
-[![License](https://img.shields.io/github/license/jackiotyu/git-worktree-manager)](https://github.com/jackiotyu/git-worktree-manager/blob/main/LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/jackiotyu/git-worktree-manager)](https://github.com/jackiotyu/git-worktree-manager)
+[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/vnehruji.verition-worktree-manager)](https://marketplace.visualstudio.com/items?itemName=vnehruji.verition-worktree-manager)
+[![GitHub release](https://img.shields.io/github/v/release/vnehruji/verition-worktree-manager)](https://github.com/vnehruji/verition-worktree-manager/releases)
+[![GitHub Open Issues](https://img.shields.io/github/issues/vnehruji/verition-worktree-manager)](https://github.com/vnehruji/verition-worktree-manager/issues)
+[![License](https://img.shields.io/github/license/vnehruji/verition-worktree-manager)](https://github.com/vnehruji/verition-worktree-manager/blob/main/LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/vnehruji/verition-worktree-manager)](https://github.com/vnehruji/verition-worktree-manager)
 
 简体中文 | [English](./README.md)
 
@@ -14,24 +14,7 @@
 
 <img src="./images/overview.png" width="800" />
 
-## Support 💖
-
-如果这个插件帮到了你，请点个 [star ⭐](https://github.com/jackiotyu/git-worktree-manager) 吧！
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="./images/donate/paypal.png" width="200" alt="PayPal Donate"/><br/>
-      <b>PayPal</b>
-    </td>
-    <td align="center">
-      <img src="./images/donate/wechat.png" width="200" alt="WeChat Donate"/><br/>
-      <b>微信</b>
-    </td>
-  </tr>
-</table>
-
-## 为什么选择 Git Worktree Manager？🌟
+## 为什么选择 Git Worktree Manager？- From jackiotyu 🌟
 
 厌倦了频繁切换分支、暂存更改或解决合并冲突？**Git Worktree Manager** 通过 Git Worktree 功能，让您在不同目录中同时处理多个分支，无需离开 VSCode。无论是修复紧急问题、开发新功能还是管理复杂项目，这款扩展都能节省时间、减少麻烦，让您的工作区井然有序。凭借无缝集成和直观的操作，它是追求高效 Git 工作流的开发者的理想选择！
 
@@ -58,7 +41,7 @@
 ## 快速上手 🚀
 
 1. **安装扩展**：
-   - 从 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=jackiotyu.git-worktree-manager) 下载。
+   - 从 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vnehruji.verition-worktree-manager) 下载。
    - 或在 VSCode 扩展视图中搜索 "Git Worktree Manager" 并安装。
 
 2. **快速开始**：
@@ -75,7 +58,7 @@
 ## 配置 ⚙️
 
 自定义您的体验：
-- **`git-worktree-manager.treeView.toSCM`**：在源代码管理视图中显示 Worktree。
+- **`verition-worktree-manager.treeView.toSCM`**：在源代码管理视图中显示 Worktree。
 - **`terminal.external.windowsExec`**：设置首选终端（例如，Windows 的 Git Bash：`"C:\\Program Files\\Git\\bin\\bash.exe"`）。
 - **`terminal.external.osxExec`**：在 macOS 上使用 iTerm 等终端（例如，`"iTerm.app"`）。
 
@@ -88,7 +71,7 @@
 4. 推送分支（`git push origin feature/awesome-idea`）。
 5. 提交 Pull Request。
 
-有好主意？请在 [issues](https://github.com/jackiotyu/git-worktree-manager/issues) 中创建“enhancement”标签的问题。
+有好主意？请在 [issues](https://github.com/vnehruji/verition-worktree-manager/issues) 中创建“enhancement”标签的问题。
 
 ## 许可证 📜
 
