@@ -5,10 +5,10 @@ A fork of [jackiotyu/git-worktree-manager](https://github.com/jackiotyu/git-work
 enhanced with **openSubpath support** — allowing you to automatically open a specific subfolder inside each worktree.
 
 [![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/vnehruji.verition-worktree-manager)](https://marketplace.visualstudio.com/items?itemName=vnehruji.verition-worktree-manager)
-[![GitHub release](https://img.shields.io/github/v/release/vnehruji/verition-worktree-manager)](https://github.com/vnehruji/verition-worktree-manager/releases)
-[![GitHub Open Issues](https://img.shields.io/github/issues/vnehruji/verition-worktree-manager)](https://github.com/vnehruji/verition-worktree-manager/issues)
-[![License](https://img.shields.io/github/license/vnehruji/verition-worktree-manager)](https://github.com/vnehruji/verition-worktree-manager/blob/main/LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/vnehruji/verition-worktree-manager)](https://github.com/vnehruji/verition-worktree-manager)
+[![GitHub release](https://img.shields.io/github/v/release/vanessanehruji/verition-worktree-manager)](https://github.com/vanessanehruji/verition-worktree-manager/releases)
+[![GitHub Open Issues](https://img.shields.io/github/issues/vanessanehruji/verition-worktree-manager)](https://github.com/vanessanehruji/verition-worktree-manager/issues)
+[![License](https://img.shields.io/github/license/vanessanehruji/verition-worktree-manager)](https://github.com/vanessanehruji/verition-worktree-manager/blob/main/LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/vanessanehruji/verition-worktree-manager)](https://github.com/vanessanehruji/verition-worktree-manager)
 
 English | [简体中文](./README.zh-CN.md)
 

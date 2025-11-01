@@ -4,6 +4,7 @@
   "displayName": "Verition Worktree Manager",
   "description": "Effortless multi-workspace management and fast Git project cloning across directories.轻松管理多工作区，快速克隆 Git 项目并跨目录运行。",
   "version": "3.16.0",
+  "packageManager": "pnpm@10.20.0",
   "engines": {
     "vscode": "^1.60.0"
   },
@@ -29,16 +30,16 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/vnehruji/verition-worktree-manager.git"
+    "url": "https://github.com/vanessanehruji/verition-worktree-manager.git"
   },
   "bugs": {
-    "url": "https://github.com/vnehruji/verition-worktree-manager/issues"
+    "url": "https://github.com/vanessanehruji/verition-worktree-manager/issues"
   },
   "badges": [
     {
       "url": "https://img.shields.io/badge/PRs-welcome-brightgreen.svg",
       "description": "PRs Welcome",
-      "href": "https://github.com/vnehruji/verition-worktree-manager/fork"
+      "href": "https://github.com/vanessanehruji/verition-worktree-manager/fork"
     }
   ],
   "icon": "images/icon.png",
@@ -1161,6 +1162,7 @@
   },
   "scripts": {
     "vsce:pack": "vsce package --no-dependencies",
+    "publish": "vsce publish --no-dependencies",
     "vscode:prepublish": "pnpm run package",
     "compile": "rspack",
     "watch": "rspack --watch",
