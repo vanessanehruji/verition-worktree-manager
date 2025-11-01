@@ -39,7 +39,7 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Package VSIX
-        run: pnpm exec vsce package --no-dependencies --out ./verition-worktree-manager-${{ github.ref_name }}.vsix
+        run: pnpm dlx vsce@latest package --no-dependencies --out ./verition-worktree-manager-${{ github.ref_name }}.vsix
 
       - name: Upload Release Artifact
         env:
@@ -47,4 +47,4 @@ jobs:
         run: gh release upload ${{ github.ref_name }} ./verition-worktree-manager-${{ github.ref_name }}.vsix
 
       - name: Publish Extension to VSCode Marketplace
-        run: pnpm exec vsce publish -p ${{ secrets.VSCE_TOKEN }} --no-dependencies
+        run: pnpm dlx vsce@latest publish --no-dependencies -p ${{ secrets.VSCE_TOKEN }}
